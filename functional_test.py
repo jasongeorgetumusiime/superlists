@@ -55,7 +55,7 @@ class NewVisitorTest(unittest.TestCase):
         time.sleep(1)
 
         # The page updates and now she shes both items on her list
-        self.check_for_row_in_list_table("1: Buy peacock feathers")
+        self.check_for_row_in_list_table("2: Use peacock feathers to make a fly")
 
         # Edith wonders whether the site remembers her list. Then she sees a that the
         # site has generated a URL for her -- there is some explanatory text to that 
