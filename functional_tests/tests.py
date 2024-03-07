@@ -7,7 +7,7 @@ from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-MAX_WAIT = 10
+MAX_WAIT = 2
 
 
 class NewVisitorTest(LiveServerTestCase):
@@ -94,7 +94,7 @@ class NewVisitorTest(LiveServerTestCase):
         # Francis visits the homepage, there is no sign of edith's list
         self.browser.get(self.live_server_url)
         page_text = self.browser.find_element(By.TAG_NAME, 'body').text
-        self.asserNotIn('Buy peacock feathers', page_text)
+        self.assertNotIn('Buy peacock feathers', page_text)
         
         # Francis starts a new list by endtering a new item. He is less 
         # interesting than Edith
